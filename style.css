@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Body styling -------------------------------*/
+body {
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container ----------------------------------*/
+main {
+    background-color: var(--white);
+    display: flex;
+    max-width: 40rem;
+    border-radius: .7rem;
+    overflow: hidden;
+    /* flex-wrap: wrap; */
+}
+
+main .content {
+    flex-basis: 90%;
+}
+
+/* Image --------------------------------------*/
+.image {
+    background-image: url(images/image-product-desktop.jpg);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+/* Content section ----------------------------*/
+.content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling ------------------------------*/
+h1 {
+    color: var(--very-dark-blue);
+    margin-bottom: 1.5rem;
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+}
+
+h1::before {
+    content: 'Perfume';
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    letter-spacing: .3rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+/* paragraph ----------------------------------*/
+p, s {
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5rem;
+}
+
+/* Price -------------------------------------*/
+.price {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.price p {
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+
+/* Button -----------------------------------*/
+button {
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    border: none;
+    padding: 1rem;
+    font-size: 14px;
+    border-radius: .7rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 20%);
+}
+
+button img {
+    margin-right: 1rem;
+}
+
+@media (max-width: 700px) {
+    .image {
+        background-image: url(images/image-product-mobile.jpg);
+    }
+
+    .content {
+        width: 100%;
+        height: 350px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
